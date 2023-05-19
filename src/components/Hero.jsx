@@ -7,15 +7,21 @@ function Hero() {
         <div className="text-gray-400 flex flex-col gap-10">
           <p className="text-lighterMainText text-lg">Name Nickname Surname</p>
           <div className="text-8xl flex flex-col gap-4">
-            <h1 className="bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:73%_1px] transition-all duration-500 hover:text-white">
-              Copywriter
-            </h1>
-            <h2 className="bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:60%_1px] transition-all duration-500 hover:text-white">
-              Marketer
-            </h2>
-            <h3 className="bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:83.5%_1px] transition-all duration-500 hover:text-white">
-              UX Designer
-            </h3>
+            <p>
+              <span className="bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:100%_1px] transition-all duration-300 hover:text-white">
+                Copywriter
+              </span>
+            </p>
+            <p>
+              <span className="bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:100%_1px] transition-all duration-300 hover:text-white">
+                Marketer
+              </span>
+            </p>
+            <p>
+              <span className="bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:100%_1px] transition-all duration-300 hover:text-white">
+                UX Designer
+              </span>
+            </p>
           </div>
           <p className="text-xl text-white font-medium">
             Professional content, web design and marketing for your company.

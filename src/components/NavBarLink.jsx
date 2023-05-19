@@ -7,7 +7,7 @@ function NavBarLink({ children }) {
     relative
     cursor-pointer
     transition-all
-    duration-500
+    duration-300
     before:content-['']
     before:absolute
     before:-bottom-0.5
@@ -17,7 +17,7 @@ function NavBarLink({ children }) {
     before:rounded-full
     before:opacity-0
     before:transition-all
-    before:duration-500
+    before:duration-300
     before:bg-gradient-to-r
     before:from-white
     before:to-white
