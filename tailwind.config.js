@@ -11,7 +11,9 @@ export default {
       },
       backgroundColor: {
         mainColor: "#01161e",
+        sectionWhat: "#e6e8e9",
         lighterMain: "#03b430",
+        mainColorGradientTint1Background: "#1a2d35",
       },
       textColor: {
         lighterMainText: "#03b430",

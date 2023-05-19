@@ -1,12 +1,12 @@
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
-// import What from "./components/What";
+import What from "./components/What";
 function App() {
   return (
-    <div className="body-font font-montserrat bg-mainColor">
+    <div className="body-font font-montserrat overflow-x-hidden">
       <NavBar />
       <Hero />
-      {/* <What /> */}
+      <What />
     </div>
   );
 }
