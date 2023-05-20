@@ -1,5 +1,5 @@
 import NavBarLink from "./NavBarLink";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 function NavBar() {
   const [color, setColor] = useState(false);
 
@@ -7,7 +7,13 @@ function NavBar() {
     window.scrollY >= 300 ? setColor(true) : setColor(false);
   };
 
-  window.addEventListener("scroll", changeColor);
+  useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []);
 
   return (
     <div className="bg-colorMain fixed top-0 left-0 right-0 shadow-md shadow-gray-800">

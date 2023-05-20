@@ -1,6 +1,6 @@
 import heroImg from "../assets/imgs/hero.jpg";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Hero() {
   const [color, setColor] = useState(false);
@@ -9,7 +9,13 @@ function Hero() {
     window.scrollY >= 500 ? setColor(true) : setColor(false);
   };
 
-  window.addEventListener("scroll", changeColor);
+  useEffect(() => {
+    window.addEventListener("scroll", changeColor);
+
+    return () => {
+      window.removeEventListener("scroll", changeColor);
+    };
+  }, []);
 
   return (
     <div
