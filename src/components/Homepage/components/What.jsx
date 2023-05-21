@@ -9,7 +9,7 @@ import WhatLi from "./WhatLi";
 
 function What() {
   return (
-    <div className="px-80 min-h-screen flex flex-col gap-16 justify-center bg-sectionWhat">
+    <div className="px-80 h-screen w-screen flex flex-col gap-16 justify-center bg-sectionWhat">
       <h1 className="text-7xl font-medium text-gray-800 font-cinzel">
         What can I do for you?
       </h1>

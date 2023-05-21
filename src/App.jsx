@@ -1,12 +1,10 @@
-import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import What from "./components/What";
+import NavBar from "./components/NavBar/NavBar";
+import HomePage from "./components/Homepage/HomePage";
 function App() {
   return (
-    <div className="body-font font-montserrat overflow-x-hidden">
+    <div className="overflow-x-hidden">
       <NavBar />
-      <Hero />
-      <What />
+      <HomePage />;
     </div>
   );
 }

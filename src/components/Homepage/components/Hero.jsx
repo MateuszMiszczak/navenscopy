@@ -1,4 +1,4 @@
-import heroImg from "../assets/imgs/hero.jpg";
+import heroImg from "../../../assets/imgs/hero.jpg";
 
 import { useState, useEffect } from "react";
 
@@ -19,13 +19,13 @@ function Hero() {
 
   return (
     <div
-      className={`w-screen h-screen pt-12 transition-all duration-1000 ${
+      className={`h-screen w-screen flex items-center justify-center transition-all duration-1000 ${
         color
           ? "bg-sectionWhat border-gray-800 border-b-borderSmallest"
           : "bg-mainColor"
       }`}
     >
-      <div className="grid grid-cols-2 gap-2 mx-60 my-40 place-items-center">
+      <div className="grid grid-cols-2 gap-2 px-60 place-items-center">
         <div className="text-gray-400 flex flex-col gap-10">
           <p className="text-lighterMainText text-lg">Name Nickname Surname</p>
           <div className="text-8xl flex flex-col gap-4">
