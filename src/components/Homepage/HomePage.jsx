@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import Who from "./components/Who";
 import What from "./components/What";
+import Examples from "./components/Examples";
 
 function HomePage() {
   return (
@@ -13,6 +14,9 @@ function HomePage() {
       </div>
       <div className="snap-center w-screen h-screen flex items-center justify-center">
         <What />
+      </div>
+      <div className="snap-start w-screen flex items-center justify-center">
+        <Examples />
       </div>
     </div>
   );

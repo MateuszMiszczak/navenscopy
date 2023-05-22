@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="overflow-x-hidden">
       <NavBar />
-      <HomePage />;
+      <HomePage />
     </div>
   );
 }

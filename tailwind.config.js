@@ -11,13 +11,14 @@ export default {
       },
       backgroundColor: {
         mainColor: "#01161e",
-        sectionWhat: "#e6e8e9",
-        lighterMain: "#03b430",
+        backgroundSections: "#e6e8e9",
+        lighterMain: "#258B76",
         mainColorGradientTint1Background: "#1a2d35",
       },
       textColor: {
-        lighterMainText: "#03b430",
+        lighterMainText: "#258B76",
         lightGray: "#4e595d",
+        headerColor: "#02394F",
       },
       borderWidth: {
         borderSmallest: "0.5px",
@@ -30,6 +31,9 @@ export default {
         mainColorGradient: "#01161e",
         mainColorGradientTint1: "#1a2d35",
         mainColorGradientTint2: "#34454b",
+        roundedBorderColor1: "#258B76",
+        roundedBorderColor2: "#044862",
+        roundedBorderColor3: "#0CC0DF",
       },
     },
   },

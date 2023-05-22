@@ -1,11 +1,11 @@
 function Who() {
   return (
-    <div className="h-screen w-screen grid grid-cols-[2fr,_1fr] items-center justify-center gap-52 bg-red-200 px-80">
+    <div className="h-screen w-screen grid grid-cols-[2fr,_1fr] items-center justify-center gap-52 bg-backgroundSections px-80">
       <div className="flex flex-col gap-16">
-        <h2 className="text-7xl font-medium text-gray-800 font-cinzel">
+        <h2 className="text-7xl font-medium text-headerColor font-montserrat tracking-tight uppercase">
           Who am I?
         </h2>
-        <ul className="flex flex-col gap-8 text-3xl font-light">
+        <ul className="flex flex-col gap-12 text-2xl font-light">
           <li>
             I am Naven. I work as a copywriter, marketer and UX Designer for
             over 5 years now.

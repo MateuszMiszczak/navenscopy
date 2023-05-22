@@ -59,7 +59,7 @@ function Hero() {
           </div>
           <p
             className={`text-xl font-light transition-all duration-1000 ${
-              color ? "text-gray-800" : "text-white"
+              color ? "text-gray-800" : "text-gray-300"
             }`}
           >
             Professional content, web design and marketing for your company.
