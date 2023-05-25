@@ -1,8 +1,8 @@
 function Who() {
   return (
-    <div className="h-screen w-screen grid grid-cols-[2fr,_1fr] items-center justify-center gap-52 bg-backgroundSections px-80">
+    <div className="grid h-screen w-screen grid-cols-[2fr,_1fr] items-center justify-center gap-52 bg-backgroundSections px-80">
       <div className="flex flex-col gap-16">
-        <h2 className="text-7xl font-medium text-headerColor font-montserrat tracking-tight uppercase">
+        <h2 className="font-montserrat text-7xl font-medium uppercase tracking-tight text-headerColor">
           Who am I?
         </h2>
         <ul className="flex flex-col gap-12 text-2xl font-light">

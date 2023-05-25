@@ -12,7 +12,7 @@ function Examples() {
   const renderElement = data.map((obj) => {
     if (obj.id % 2 === 0) {
       return (
-        <div className="flex gap-36 items-start pb-16" key={obj.id}>
+        <div className="flex items-start gap-36 pb-16" key={obj.id}>
           <div className="flex flex-col gap-8 text-start">
             <h2 className="text-4xl font-medium text-headerColor">
               {obj.header1}
@@ -22,15 +22,15 @@ function Examples() {
             <p className="text-xl">{obj.p2}</p>
             <p className="text-xl">{obj.p3}</p>
           </div>
-          <div className="rounded-md overflow-hidden max-w-xl max-h-xl">
+          <div className="max-h-xl max-w-xl overflow-hidden rounded-md">
             <img src={obj.img} alt="Photo" className="aspect-square" />
           </div>
         </div>
       );
     } else {
       return (
-        <div className="flex gap-36 items-start pb-16" key={obj.id}>
-          <div className="rounded-md overflow-hidden max-w-xl max-h-xl">
+        <div className="flex items-start gap-36 pb-16" key={obj.id}>
+          <div className="max-h-xl max-w-xl overflow-hidden rounded-md">
             <img src={obj.img} alt="Photo" className="aspect-square" />
           </div>
           <div className="flex flex-col gap-8 text-start">

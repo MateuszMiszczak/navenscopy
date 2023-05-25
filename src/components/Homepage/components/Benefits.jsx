@@ -11,10 +11,13 @@ function Benefits() {
 
   const renderImages = data.map((obj) => {
     return (
-      <li className="flex flex-col gap-2" key={obj.id}>
-        <di>
-          <img src={obj.img} alt="Benefits image" />
-        </di>
+      <li className="overflow-hidden" key={obj.id}>
+        <img
+          src={obj.img}
+          alt="Benefits image"
+          className="transition-all duration-300
+    hover:scale-125"
+        />
       </li>
     );
   });
@@ -22,10 +25,10 @@ function Benefits() {
   const renderText = data.map((obj) => {
     return (
       <li key={obj.id}>
-        <div className="flex flex-col text-white h-full w-full bg-benefitsDark px-8 ">
-          <div className="flex gap-6 py-8 items-center">
-            <div className="h-12 w-12 rounded-full bg-gradient-to-r from-roundedBorderColor3 via-roundedBorderColor2 to-roundedBorderColor1 p-[2px] overflow-hidden">
-              <div className="flex h-full w-full rounded-full items-center justify-center bg-mainColor back">
+        <div className="flex h-full w-full flex-col bg-benefitsDark px-8 text-white ">
+          <div className="flex items-center gap-6 py-8">
+            <div className="h-12 w-12 overflow-hidden rounded-full bg-gradient-to-r from-roundedBorderColor3 via-roundedBorderColor2 to-roundedBorderColor1 p-[2px]">
+              <div className="back flex h-full w-full items-center justify-center rounded-full bg-mainColor">
                 <div className="text-xl font-semibold text-white">
                   {obj.id < 9 ? `0${obj.id}` : obj.id}
                 </div>
@@ -41,9 +44,9 @@ function Benefits() {
   });
 
   return (
-    <div className="w-screen h-screen flex flex-col items-center place-content-center gap-16 px-80">
+    <div className="flex h-screen w-screen flex-col place-content-center items-center gap-16 px-80">
       <h1 className="text-7xl text-headerColor">Benefits of cooperation</h1>
-      <ul className="grid grid-cols-3 grid-rows-2 rounded-md gap-[0.5px] overflow-hidden ">
+      <ul className="grid grid-cols-3 grid-rows-2 gap-[0.5px] overflow-hidden rounded-md ">
         {renderImages}
         {renderText}
       </ul>

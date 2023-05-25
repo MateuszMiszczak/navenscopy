@@ -19,19 +19,19 @@ function Hero() {
 
   return (
     <div
-      className={`h-screen w-screen flex items-center justify-center transition-all duration-1000 ${
+      className={`flex h-screen w-screen items-center justify-center transition-all duration-1000 ${
         color
-          ? "bg-sectionWhat border-gray-800 border-b-borderSmallest"
+          ? "bg-sectionWhat border-b-borderSmallest border-gray-800"
           : "bg-mainColor"
       }`}
     >
-      <div className="grid grid-cols-2 gap-2 px-60 place-items-center">
-        <div className="text-gray-400 flex flex-col gap-10">
-          <p className="text-lighterMainText text-lg">Name Nickname Surname</p>
-          <div className="text-8xl flex flex-col gap-4">
+      <div className="grid grid-cols-2 place-items-center gap-2 px-60">
+        <div className="flex flex-col gap-10 text-gray-400">
+          <p className="text-lg text-lighterMainText">Name Nickname Surname</p>
+          <div className="flex flex-col gap-4 text-8xl">
             <p>
               <span
-                className={`cursor-default bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:100%_1px] transition-all duration-300 hover:text-white ${
+                className={`cursor-default bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-left-bottom bg-no-repeat transition-all duration-300 hover:bg-[length:100%_1px] hover:text-white ${
                   color ? "text-gray-800" : "hover:text-white"
                 }`}
               >
@@ -40,7 +40,7 @@ function Hero() {
             </p>
             <p>
               <span
-                className={`cursor-default bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:100%_1px] transition-all duration-300 hover:text-white ${
+                className={`cursor-default bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-left-bottom bg-no-repeat transition-all duration-300 hover:bg-[length:100%_1px] hover:text-white ${
                   color ? "text-gray-800" : "hover:text-white"
                 }`}
               >
@@ -49,7 +49,7 @@ function Hero() {
             </p>
             <p>
               <span
-                className={`cursor-default bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-no-repeat bg-left-bottom hover:bg-[length:100%_1px] transition-all duration-300 hover:text-white ${
+                className={`cursor-default bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-left-bottom bg-no-repeat transition-all duration-300 hover:bg-[length:100%_1px] hover:text-white ${
                   color ? "text-gray-800" : "hover:text-white"
                 }`}
               >
@@ -66,7 +66,7 @@ function Hero() {
             Reach new customers and skyrocket your sales.
           </p>
         </div>
-        <div className="border-0 rounded-md overflow-hidden w-9/12 place-self-center">
+        <div className="w-9/12 place-self-center overflow-hidden rounded-md border-0">
           <img src={heroImg} alt="Photo of a guy working on a laptop" />
         </div>
       </div>

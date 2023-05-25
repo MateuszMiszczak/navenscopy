@@ -16,7 +16,7 @@ function NavBar() {
   }, []);
 
   return (
-    <div className="bg-colorMain fixed top-0 left-0 right-0 shadow-md shadow-gray-800">
+    <div className="bg-colorMain fixed left-0 right-0 top-0 shadow-md shadow-gray-800">
       <nav
         className={`flex items-center justify-start px-20 py-7 font-cinzel transition-all duration-700 ${
           color ? "bg-mainColorGradientTint1Background" : "bg-mainColor"
@@ -24,7 +24,7 @@ function NavBar() {
       >
         <h1 className="font-lobster text-3xl text-white">
           Naven's copy
-          <span className="mx-4 inline-block text-lightGray font-cinzel">
+          <span className="mx-4 inline-block font-cinzel text-lightGray">
             |
           </span>
         </h1>
