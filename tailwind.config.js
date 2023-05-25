@@ -14,6 +14,9 @@ export default {
         backgroundSections: "#e6e8e9",
         lighterMain: "#258B76",
         mainColorGradientTint1Background: "#1a2d35",
+        benefitsDark: "#022b3b",
+        benefitsMedium: "#02394f",
+        benefitsLighter: "#044862",
       },
       textColor: {
         lighterMainText: "#258B76",
