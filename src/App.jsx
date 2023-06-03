@@ -1,9 +1,10 @@
-import NavBar from "./components/NavBar/NavBar";
+import { useState, useEffect } from "react";
+
 import HomePage from "./components/Homepage/HomePage";
+
 function App() {
   return (
-    <div className="overflow-x-hidden">
-      <NavBar />
+    <div>
       <HomePage />
     </div>
   );

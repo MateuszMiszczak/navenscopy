@@ -1,76 +1,90 @@
+import useMediaQuery from "../../../hooks/useMediaQuery";
+import { motion } from "framer-motion";
+
 import heroImg from "../../../assets/imgs/hero.jpg";
 
-import { useState, useEffect } from "react";
-
 function Hero() {
-  const [color, setColor] = useState(false);
-
-  const changeColor = () => {
-    window.scrollY >= 500 ? setColor(true) : setColor(false);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeColor);
-
-    return () => {
-      window.removeEventListener("scroll", changeColor);
-    };
-  }, []);
+  const isAboveLargeScreens = useMediaQuery("(min-width: 1200px)");
 
   return (
-    <div
-      className={`flex h-screen w-screen items-center justify-center transition-all duration-1000 ${
-        color
-          ? "bg-sectionWhat border-b-borderSmallest border-gray-800"
-          : "bg-mainColor"
-      }`}
-    >
-      <div className="grid grid-cols-2 place-items-center gap-2 px-60">
-        <div className="flex flex-col gap-10 text-gray-400">
-          <p className="text-lg text-lighterMainText">Name Nickname Surname</p>
-          <div className="flex flex-col gap-4 text-8xl">
-            <p>
-              <span
-                className={`cursor-default bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-left-bottom bg-no-repeat transition-all duration-300 hover:bg-[length:100%_1px] hover:text-white ${
-                  color ? "text-gray-800" : "hover:text-white"
-                }`}
-              >
-                Copywriter
-              </span>
+    <section className="mx-auto h-screen w-3/4 gap-20 py-10 md:flex md:h-full md:items-center md:justify-between">
+      <div className="z-10 mt-16 flex basis-3/5 justify-center md:order-2 md:mt-32">
+        {isAboveLargeScreens ? (
+          <div className="overflow-hidden rounded-md">
+            <img
+              className="z-10 w-full max-w-[400px] transition duration-500 md:max-w-[550px]"
+              src={heroImg}
+              alt="Photo of a guy working on a laptop"
+            />
+          </div>
+        ) : (
+          <div className="overflow-hidden rounded-md">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+              variants={{
+                hidden: { opacity: 0, y: -50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <img
+                className="z-10 w-full max-w-[400px] md:max-w-[600px]"
+                src={heroImg}
+                alt="Photo of a guy working on a laptop"
+              />
+            </motion.div>
+          </div>
+        )}
+      </div>
+
+      <div className="z-30 mt-12 basis-2/5">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <div className="flex flex-col gap-1 md:gap-2 lg:gap-4">
+            <p className="z-10 text-center font-cinzel text-lg text-lighterMainText md:text-start md:text-2xl">
+              Name Nickname Surname
             </p>
-            <p>
-              <span
-                className={`cursor-default bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-left-bottom bg-no-repeat transition-all duration-300 hover:bg-[length:100%_1px] hover:text-white ${
-                  color ? "text-gray-800" : "hover:text-white"
-                }`}
-              >
-                Marketer
-              </span>
-            </p>
-            <p>
-              <span
-                className={`cursor-default bg-gradient-to-r from-gray-400  to-mainColorGradientTint2 bg-[length:0%_1px] bg-left-bottom bg-no-repeat transition-all duration-300 hover:bg-[length:100%_1px] hover:text-white ${
-                  color ? "text-gray-800" : "hover:text-white"
-                }`}
-              >
-                UX Designer
-              </span>
+            <div className="gap-0.25 flex flex-col md:gap-1 lg:gap-2">
+              <p className="mb-1 text-center text-3xl md:text-start md:text-5xl xl:text-6xl">
+                <span
+                  className={`cursor-default bg-gradient-to-r from-gray-300 to-mainColorGradientTint2  bg-[length:0%_1px] bg-left-bottom bg-no-repeat text-gray-400 transition-all duration-300 hover:bg-[length:100%_1px] hover:text-white `}
+                >
+                  Copywriter
+                </span>
+              </p>
+              <p className="mb-1 text-center text-3xl md:text-start md:text-5xl xl:text-6xl">
+                <span
+                  className={`cursor-default bg-gradient-to-r from-gray-300 to-mainColorGradientTint2  bg-[length:0%_1px] bg-left-bottom bg-no-repeat text-gray-400 transition-all duration-300 hover:bg-[length:100%_1px] hover:text-white `}
+                >
+                  Marketer
+                </span>
+              </p>
+              <p className="mb-3 text-center text-3xl md:text-start md:text-5xl xl:text-6xl">
+                <span
+                  className={`cursor-default bg-gradient-to-r from-gray-300 to-mainColorGradientTint2  bg-[length:0%_1px] bg-left-bottom bg-no-repeat text-gray-400 transition-all duration-300 hover:bg-[length:100%_1px] hover:text-white `}
+                >
+                  UX Designer
+                </span>
+              </p>
+            </div>
+            <p className="text-center text-sm text-gray-200 md:text-start md:text-base lg:text-lg">
+              Professional content, web design and marketing for your company.
+              Reach new customers and skyrocket your sales.
             </p>
           </div>
-          <p
-            className={`text-xl font-light transition-all duration-1000 ${
-              color ? "text-gray-800" : "text-gray-300"
-            }`}
-          >
-            Professional content, web design and marketing for your company.
-            Reach new customers and skyrocket your sales.
-          </p>
-        </div>
-        <div className="w-9/12 place-self-center overflow-hidden rounded-md border-0">
-          <img src={heroImg} alt="Photo of a guy working on a laptop" />
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }
 

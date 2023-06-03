@@ -19,7 +19,7 @@ export const benefitsData = [
   },
   {
     id: 3,
-    img: img2,
+    img: img3,
     header: `Building reputation`,
     paragraph: `My job is to make sure that your brand is well known and trusted.`,
   },

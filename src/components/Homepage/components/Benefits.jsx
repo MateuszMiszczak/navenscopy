@@ -3,7 +3,6 @@ import { benefitsData } from "../../../benefitsData";
 
 function Benefits() {
   const [data, setData] = useState([]);
-  const [trackId, setTrackId] = useState(1);
 
   useEffect(() => {
     setData(benefitsData);
@@ -11,12 +10,15 @@ function Benefits() {
 
   const renderImages = data.map((obj) => {
     return (
-      <li className="overflow-hidden" key={obj.id}>
+      <li
+        className="overflow-hidden 
+    "
+        key={obj.id}
+      >
         <img
           src={obj.img}
           alt="Benefits image"
-          className="transition-all duration-300
-    hover:scale-125"
+          className="transition-all duration-300 hover:scale-125"
         />
       </li>
     );

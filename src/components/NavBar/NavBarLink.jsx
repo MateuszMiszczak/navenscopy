@@ -1,7 +1,8 @@
 function NavBarLink({ children }) {
   return (
-    <li
-      className="relative inline-block
+    <div>
+      <a
+        className="relative inline-block
     cursor-pointer
     text-2xl
     text-white
@@ -20,12 +21,14 @@ function NavBarLink({ children }) {
     before:transition-all
     before:duration-300
     before:content-['']
-    hover:text-gray-400
+    hover:text-gray-300
     hover:before:w-full
     hover:before:opacity-100"
-    >
-      <a href="#">{children}</a>
-    </li>
+        href="#"
+      >
+        {children}
+      </a>
+    </div>
   );
 }
 
