@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { benefitsData } from "../../../benefitsData";
+import { benefitsData } from "../../../data/benefitsData";
 
 function Benefits() {
   const [data, setData] = useState([]);

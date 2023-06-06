@@ -1,7 +1,7 @@
-import img1 from "./assets/imgs/exampleComponentImgs/ProfessionalCopywriting.jpg";
-import img2 from "./assets/imgs/exampleComponentImgs/AdvancedMarketing.jpg";
-import img3 from "./assets/imgs/exampleComponentImgs/InstantExecution.jpg";
-import img4 from "./assets/imgs/exampleComponentImgs/FreshWebDesign.jpg";
+import img1 from "../assets/imgs/exampleComponentImgs/ProfessionalCopywriting.jpg";
+import img2 from "../assets/imgs/exampleComponentImgs/AdvancedMarketing.jpg";
+import img3 from "../assets/imgs/exampleComponentImgs/InstantExecution.jpg";
+import img4 from "../assets/imgs/exampleComponentImgs/FreshWebDesign.jpg";
 
 export const exampleComponentData = [
   {

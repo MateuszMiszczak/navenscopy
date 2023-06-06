@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { exampleComponentData } from "../../../exampleComponentData";
+import { exampleComponentData } from "../../../data/exampleComponentData";
 
 function Examples() {
   const [data, setData] = useState([]);
