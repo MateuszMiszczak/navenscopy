@@ -41,11 +41,9 @@ function NavBarLink({ to, children, className, activeClassName }) {
   };
 
   return (
-    <>
-      <a className={classes} href={to} onClick={handleClick}>
-        {children}
-      </a>
-    </>
+    <a className={classes} href={to} onClick={handleClick}>
+      {children}
+    </a>
   );
 }
 

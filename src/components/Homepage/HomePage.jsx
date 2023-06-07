@@ -1,7 +1,7 @@
 import Hero from "./components/Hero";
 // import Who from "./components/Who";
-// import What from "./components/What";
-// import Examples from "./components/Examples";
+import What from "./components/What";
+import Examples from "./components/Examples";
 // import Benefits from "./components/Benefits";
 
 function HomePage() {
@@ -10,16 +10,11 @@ function HomePage() {
       <div className="bg-mainColor md:h-full">
         <Hero />
       </div>
-      <div className="bg-mainColor md:h-full">
-        <Hero />
-      </div>
-      <div className="bg-mainColor md:h-full">
-        <Hero />
+      <div className="md:h-full">
+        <Examples />
       </div>
 
       {/* <Who />
-      <What />
-      <Examples />
       <Benefits /> */}
     </div>
   );

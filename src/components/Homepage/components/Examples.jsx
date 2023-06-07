@@ -1,54 +1,70 @@
 import { useState, useEffect } from "react";
-
+import useMediaQuery from "../../../hooks/useMediaQuery";
 import { exampleComponentData } from "../../../data/exampleComponentData";
 
 function Examples() {
   const [data, setData] = useState([]);
+  const isAboveMdScreens = useMediaQuery("(min-width: 1060px)");
 
   useEffect(() => {
     setData(exampleComponentData);
   }, []);
 
   const renderElement = data.map((obj) => {
-    if (obj.id % 2 === 0) {
-      return (
-        <div className="flex items-start gap-36 pb-16" key={obj.id}>
-          <div className="flex flex-col gap-8 text-start">
-            <h2 className="text-4xl font-medium text-headerColor">
-              {obj.header1}
-            </h2>
-            <p className="text-xl font-medium">{obj.header2}</p>
-            <p className="text-xl">{obj.p1}</p>
-            <p className="text-xl">{obj.p2}</p>
-            <p className="text-xl">{obj.p3}</p>
+    return !isAboveMdScreens ? (
+      <div className="flex flex-col gap-4 text-center">
+        <h2 className="text-3xl font-medium text-headerColor">{obj.header1}</h2>
+        <p className="text-base font-medium">{obj.header2}</p>
+        <p className="text-base">{obj.p1}</p>
+        <p className="text-base">{obj.p2}</p>
+        <p className="text-base">{obj.p3}</p>
+      </div>
+    ) : (
+      <>
+        {obj.id % 2 === 0 ? (
+          <div
+            className="flex items-center gap-36 pb-16 lg:gap-48"
+            key={obj.id}
+          >
+            <div className="flex basis-2/5 flex-col gap-8 text-start">
+              <h2 className="text-3xl font-medium text-headerColor lg:text-4xl">
+                {obj.header1}
+              </h2>
+              <p className="text-base font-medium lg:text-xl">{obj.header2}</p>
+              <p className="text-base lg:text-xl">{obj.p1}</p>
+              <p className="text-base lg:text-xl">{obj.p2}</p>
+              <p className="text-base lg:text-xl">{obj.p3}</p>
+            </div>
+            <div className="max-h-xl max-w-xl basis-3/5 overflow-hidden rounded-md">
+              <img src={obj.img} alt="Photo" className="aspect-square" />
+            </div>
           </div>
-          <div className="max-h-xl max-w-xl overflow-hidden rounded-md">
-            <img src={obj.img} alt="Photo" className="aspect-square" />
+        ) : (
+          <div
+            className="flex items-center gap-36 pb-16 lg:gap-48"
+            key={obj.id}
+          >
+            <div className="max-h-xl max-w-xl basis-3/5 overflow-hidden rounded-md">
+              <img src={obj.img} alt="Photo" className="aspect-square" />
+            </div>
+
+            <div className="flex basis-2/5 flex-col gap-8 text-start">
+              <h2 className="text-3xl font-medium text-headerColor lg:text-4xl">
+                {obj.header1}
+              </h2>
+              <p className="text-base font-medium lg:text-xl">{obj.header2}</p>
+              <p className="text-base lg:text-xl">{obj.p1}</p>
+              <p className="text-base lg:text-xl">{obj.p2}</p>
+              <p className="text-base lg:text-xl">{obj.p3}</p>
+            </div>
           </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="flex items-start gap-36 pb-16" key={obj.id}>
-          <div className="max-h-xl max-w-xl overflow-hidden rounded-md">
-            <img src={obj.img} alt="Photo" className="aspect-square" />
-          </div>
-          <div className="flex flex-col gap-8 text-start">
-            <h2 className="text-4xl font-medium text-headerColor">
-              {obj.header1}
-            </h2>
-            <p className="text-xl font-medium">{obj.header2}</p>
-            <p className="text-xl">{obj.p1}</p>
-            <p className="text-xl">{obj.p2}</p>
-            <p className="text-xl">{obj.p3}</p>
-          </div>
-        </div>
-      );
-    }
+        )}
+      </>
+    );
   });
 
   return (
-    <div className="flex flex-col gap-8 bg-backgroundSections px-80 py-52">
+    <div className="mx-auto flex h-screen w-3/5 flex-col gap-10 py-5 md:h-full md:gap-20 md:py-10">
       {renderElement}
     </div>
   );

@@ -48,7 +48,7 @@ function NavBar({ isTopOfPage }) {
 
             {!isAboveLargeScreens && isMenuToggled && (
               <div className="to-{rgba(2, 43, 59, 0.6)} fixed bottom-0 right-0 h-full w-[300px] justify-end bg-gradient-to-b from-black via-gray-900 py-6">
-                <div className="ml-[33%] mt-[20%] flex flex-col gap-10 font-cinzel text-sm">
+                <div className="ml-[33%] mt-[20%] flex flex-col items-start gap-10 font-cinzel text-sm">
                   {renderedLinks}
                 </div>
               </div>
