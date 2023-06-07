@@ -12,7 +12,7 @@ function Examples() {
 
   const renderElement = data.map((obj) => {
     return !isAboveMdScreens ? (
-      <div className="flex flex-col gap-4 text-center">
+      <div className="flex flex-col gap-4 text-start">
         <h2 className="text-3xl font-medium text-headerColor">{obj.header1}</h2>
         <p className="text-base font-medium">{obj.header2}</p>
         <p className="text-base">{obj.p1}</p>
@@ -27,13 +27,13 @@ function Examples() {
             key={obj.id}
           >
             <div className="flex basis-2/5 flex-col gap-8 text-start">
-              <h2 className="text-3xl font-medium text-headerColor lg:text-4xl">
+              <h2 className="text-2xl font-medium text-headerColor lg:text-3xl">
                 {obj.header1}
               </h2>
-              <p className="text-base font-medium lg:text-xl">{obj.header2}</p>
-              <p className="text-base lg:text-xl">{obj.p1}</p>
-              <p className="text-base lg:text-xl">{obj.p2}</p>
-              <p className="text-base lg:text-xl">{obj.p3}</p>
+              <p className="text-base font-medium lg:text-lg">{obj.header2}</p>
+              <p className="text-base lg:text-lg">{obj.p1}</p>
+              <p className="text-base lg:text-lg">{obj.p2}</p>
+              <p className="text-base lg:text-lg">{obj.p3}</p>
             </div>
             <div className="max-h-xl max-w-xl basis-3/5 overflow-hidden rounded-md">
               <img src={obj.img} alt="Photo" className="aspect-square" />
@@ -49,13 +49,13 @@ function Examples() {
             </div>
 
             <div className="flex basis-2/5 flex-col gap-8 text-start">
-              <h2 className="text-3xl font-medium text-headerColor lg:text-4xl">
+              <h2 className="text-2xl font-medium text-headerColor lg:text-3xl">
                 {obj.header1}
               </h2>
-              <p className="text-base font-medium lg:text-xl">{obj.header2}</p>
-              <p className="text-base lg:text-xl">{obj.p1}</p>
-              <p className="text-base lg:text-xl">{obj.p2}</p>
-              <p className="text-base lg:text-xl">{obj.p3}</p>
+              <p className="text-base font-medium lg:text-lg">{obj.header2}</p>
+              <p className="text-base lg:text-lg">{obj.p1}</p>
+              <p className="text-base lg:text-lg">{obj.p2}</p>
+              <p className="text-base lg:text-lg">{obj.p3}</p>
             </div>
           </div>
         )}

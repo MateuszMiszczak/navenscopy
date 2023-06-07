@@ -7,10 +7,10 @@ import Examples from "./components/Examples";
 function HomePage() {
   return (
     <div className="h-screen font-montserrat">
-      <div className="bg-mainColor md:h-full">
+      <div className="mb-20 bg-mainColor md:h-full">
         <Hero />
       </div>
-      <div className="md:h-full">
+      <div className="mb-20 md:h-full">
         <Examples />
       </div>
 
