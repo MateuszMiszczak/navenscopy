@@ -12,7 +12,7 @@ function Examples() {
 
   const renderElement = data.map((obj) => {
     return !isAboveMdScreens ? (
-      <div className="flex flex-col gap-4 text-start">
+      <div className="flex flex-col gap-4 text-start" key={obj.id}>
         <h2 className="text-3xl font-medium text-headerColor">{obj.header1}</h2>
         <p className="text-base font-medium">{obj.header2}</p>
         <p className="text-base">{obj.p1}</p>

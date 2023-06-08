@@ -7,7 +7,7 @@ function Hero() {
   const isAboveLargeScreens = useMediaQuery("(min-width: 1200px)");
 
   return (
-    <section className="mx-auto h-screen w-3/4 gap-20 py-10 md:flex md:h-full md:items-center md:justify-between">
+    <section className="mx-auto w-3/4 gap-20 py-6 xs:h-full md:flex md:items-center md:justify-between lg:h-screen">
       <div className="z-10 mt-16 flex basis-3/5 justify-center md:order-2 md:mt-32">
         {isAboveLargeScreens ? (
           <div className="overflow-hidden rounded-md">
