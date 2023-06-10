@@ -9,7 +9,7 @@ function NavBar({ isTopOfPage }) {
   const isAboveLargeScreens = useMediaQuery("(min-width: 1200px)");
   const navBarBackground = isTopOfPage
     ? "bg-mainColor"
-    : "bg-gradient-to-b from-black via-gray-900 via-gray-800 via-gray-700 via-65%";
+    : "bg-gradient-to-b from-black via-gray-900 via-gray-800 via-gray-700 via-85%";
   const renderIcon = isMenuToggled ? <HiOutlineXMark /> : <HiBars3 />;
 
   const renderedLinks = links.map((link) => {
@@ -17,7 +17,7 @@ function NavBar({ isTopOfPage }) {
       <NavBarLink
         key={link.label}
         to={link.path}
-        activeClassName="border-b border-red-400 text-gray-400"
+        activeClassName="border-b border-borderLighterMainText text-gray-400"
       >
         {link.label}
       </NavBarLink>
@@ -26,7 +26,7 @@ function NavBar({ isTopOfPage }) {
 
   return (
     <nav
-      className={`${navBarBackground}  fixed top-0 z-40 w-full py-6 shadow-xl transition duration-500 `}
+      className={`${navBarBackground} fixed top-0 z-40 w-full py-6 shadow-xl transition duration-500`}
     >
       <div className="mx-auto flex w-5/6 items-center justify-between lg:justify-start ">
         <h4 className="font-lobster text-3xl text-white">
@@ -47,8 +47,8 @@ function NavBar({ isTopOfPage }) {
             </button>
 
             {!isAboveLargeScreens && isMenuToggled && (
-              <div className="from-1% fixed bottom-0 right-0 h-full w-[300px] justify-end bg-gradient-to-b from-black via-gray-500 via-gray-700 via-20% via-55% py-6">
-                <div className="ml-[33%] mt-[20%] flex flex-col items-start gap-10 font-cinzel text-sm">
+              <div className="from-1% fixed bottom-0 right-0 h-full w-[250px] justify-end bg-gradient-to-b from-black via-gray-500 via-gray-700 via-20% via-55% py-6">
+                <div className="ml-[25%] mt-[20%] flex flex-col items-start gap-10 font-cinzel text-sm">
                   {renderedLinks}
                 </div>
               </div>

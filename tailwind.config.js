@@ -29,6 +29,7 @@ export default {
       },
       borderColor: {
         borderGray: "#9a9c9c",
+        borderLighterMainText: "#258B76",
       },
       gradientColorStops: {
         ligterGrayGradient: "#9a9c9c",
@@ -38,6 +39,9 @@ export default {
         roundedBorderColor1: "#258B76",
         roundedBorderColor2: "#044862",
         roundedBorderColor3: "#0CC0DF",
+      },
+      boxShadow: {
+        "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
       },
     },
     screens: {

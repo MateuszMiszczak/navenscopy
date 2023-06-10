@@ -10,32 +10,43 @@ function Hero() {
     <section className="mx-auto w-3/4 gap-20 py-6 xs:h-full md:flex md:items-center md:justify-between lg:h-screen">
       <div className="z-10 mt-16 flex basis-3/5 justify-center md:order-2 md:mt-32">
         {isAboveLargeScreens ? (
-          <div className="overflow-hidden rounded-md">
-            <img
-              className="z-10 w-full max-w-[400px] transition duration-500 md:max-w-[550px]"
-              src={heroImg}
-              alt="Photo of a guy working on a laptop"
-            />
-          </div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 1 }}
+            variants={{
+              hidden: { opacity: 0, x: 50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <div className="overflow-hidden rounded-md shadow-3xl shadow-gray-700">
+              <img
+                className="z-10 w-full max-w-[400px] transition duration-500 md:max-w-[550px]"
+                src={heroImg}
+                alt="Photo of a guy working on a laptop"
+              />
+            </div>
+          </motion.div>
         ) : (
-          <div className="overflow-hidden rounded-md">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.5 }}
-              variants={{
-                hidden: { opacity: 0, y: -50 },
-                visible: { opacity: 1, y: 0 },
-              }}
-            >
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, y: -50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <div className="overflow-hidden rounded-md shadow-xl shadow-gray-700">
               <img
                 className="z-10 w-full max-w-[400px] md:max-w-[600px]"
                 src={heroImg}
                 alt="Photo of a guy working on a laptop"
               />
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         )}
       </div>
 

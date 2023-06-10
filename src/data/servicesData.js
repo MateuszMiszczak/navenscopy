@@ -1,4 +1,4 @@
-export const activitiesData = [
+export const servicesData = [
   {
     id: 1,
     icon: "HiOutlineChartBar",

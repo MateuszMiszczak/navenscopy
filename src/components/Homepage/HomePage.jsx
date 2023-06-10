@@ -1,6 +1,6 @@
 import Hero from "./components/Hero";
 
-import Activities from "./components/Activities";
+import Services from "./components/Services";
 // import What from "./components/What";
 import Examples from "./components/Examples";
 // import Benefits from "./components/Benefits";
@@ -8,11 +8,11 @@ import Examples from "./components/Examples";
 function HomePage() {
   return (
     <div className="h-screen font-montserrat">
-      <div className="mb-20 bg-mainColor md:h-full">
+      <div className="mb-12 bg-mainColor md:h-full lg:mb-20">
         <Hero />
       </div>
       <div className="mb-20 flex items-center lg:h-full">
-        <Activities />
+        <Services />
       </div>
       <div className="mb-20 md:h-full">
         <Examples />
