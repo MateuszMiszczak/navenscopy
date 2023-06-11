@@ -112,7 +112,7 @@ function Examples() {
   });
 
   return (
-    <section className="mx-auto flex h-screen w-3/5 flex-col gap-10 py-5 md:h-full md:gap-20 md:py-10">
+    <section className="mx-auto flex h-full w-3/5 flex-col gap-10 py-5 md:h-full md:gap-20 md:py-10">
       {renderElement}
     </section>
   );

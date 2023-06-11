@@ -1,58 +1,63 @@
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+
 import { benefitsData } from "../../../data/benefitsData";
+import IconCircleComponent from "./IconCircleComponent";
 
 function Benefits() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    setData(benefitsData);
-  }, []);
-
-  const renderImages = data.map((obj) => {
+  const renderData = benefitsData.map((obj) => {
     return (
-      <li
-        className="overflow-hidden 
-    "
-        key={obj.id}
-      >
-        <img
-          src={obj.img}
-          alt="Benefits image"
-          className="transition-all duration-300 hover:scale-125"
-        />
-      </li>
-    );
-  });
-
-  const renderText = data.map((obj) => {
-    return (
-      <li key={obj.id}>
-        <div className="flex h-full w-full flex-col bg-benefitsDark px-8 text-white ">
-          <div className="flex items-center gap-6 py-8">
-            <div className="h-12 w-12 overflow-hidden rounded-full bg-gradient-to-r from-roundedBorderColor3 via-roundedBorderColor2 to-roundedBorderColor1 p-[2px]">
-              <div className="back flex h-full w-full items-center justify-center rounded-full bg-mainColor">
-                <div className="text-xl font-semibold text-white">
-                  {obj.id < 9 ? `0${obj.id}` : obj.id}
-                </div>
-              </div>
-            </div>
-
-            <div className="font-bold">{obj.header}</div>
+      <div key={obj.id}>
+        <div className="flex max-h-[500px] min-h-[500px] min-w-[375px] max-w-[375px] flex-col gap-1 overflow-hidden bg-benefitsLightest text-white">
+          <div className="overflow-hidden">
+            <img src={obj.img} alt="Benefits image" className="rounded-lg" />
           </div>
-          <div className="text-xl">{obj.paragraph}</div>
+          <div className="grow rounded-lg bg-benefitsLighter p-10 text-start transition duration-300 hover:-translate-y-20 hover:border hover:border-gray-600">
+            <div className="flex flex-col gap-3 md:gap-6">
+              <div className="flex items-center gap-4">
+                <IconCircleComponent
+                  iconOrText={obj.id > 0 && obj.id < 10 ? `0${obj.id}` : obj.id}
+                />
+                <h2 className="text-xl font-medium">{obj.header}</h2>
+              </div>
+              <p className="text-sm">{obj.paragraph}</p>
+            </div>
+          </div>
         </div>
-      </li>
+      </div>
     );
   });
 
   return (
-    <div className="flex flex-col place-content-center items-center gap-16 px-80">
-      <h1 className="text-7xl text-headerColor">Benefits of cooperation</h1>
-      <ul className="grid grid-cols-3 grid-rows-2 gap-[0.5px] overflow-hidden rounded-md ">
-        {renderImages}
-        {renderText}
-      </ul>
-    </div>
+    <section className="mx-auto flex h-full w-3/5 flex-col gap-10 py-5 md:h-full md:gap-16 lg:gap-32">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.4 }}
+        variants={{
+          hidden: { opacity: 0, y: -50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        className="flex flex-col items-center"
+      >
+        <h1 className="text-2xl font-bold uppercase text-headerColor sm:text-3xl md:text-4xl lg:text-5xl">
+          Benefits of cooperation
+        </h1>
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.7 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        className="flex flex-col gap-1 place-self-center overflow-hidden rounded-lg bg-benefitsLightest shadow-bottom shadow-gray-500 lg:flex-row"
+      >
+        {renderData}
+      </motion.div>
+    </section>
   );
 }
 

@@ -18,6 +18,7 @@ export default {
         benefitsDarkRgba: "rgba(2, 43, 59, 0.35)",
         benefitsMedium: "#02394f",
         benefitsLighter: "#044862",
+        benefitsLightest: "#366d81",
       },
       textColor: {
         lighterMainText: "#258B76",
@@ -39,9 +40,11 @@ export default {
         roundedBorderColor1: "#258B76",
         roundedBorderColor2: "#044862",
         roundedBorderColor3: "#0CC0DF",
+        roundedBorderColor4: "#366d81",
       },
       boxShadow: {
-        "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+        bottom: "0 8px 4px -2px",
+        bottomHeavy: "0 10px 16px -2px",
       },
     },
     screens: {
