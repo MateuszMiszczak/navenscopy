@@ -16,7 +16,7 @@ function Examples() {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: { opacity: 0, y: 100 },
@@ -39,7 +39,7 @@ function Examples() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
             variants={{
               hidden: { opacity: 0, x: -100 },
@@ -74,7 +74,7 @@ function Examples() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
             variants={{
               hidden: { opacity: 0, x: 100 },
@@ -112,9 +112,9 @@ function Examples() {
   });
 
   return (
-    <div className="mx-auto flex h-screen w-3/5 flex-col gap-10 py-5 md:h-full md:gap-20 md:py-10">
+    <section className="mx-auto flex h-screen w-3/5 flex-col gap-10 py-5 md:h-full md:gap-20 md:py-10">
       {renderElement}
-    </div>
+    </section>
   );
 }
 

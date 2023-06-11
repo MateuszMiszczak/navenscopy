@@ -8,7 +8,7 @@ import Examples from "./components/Examples";
 function HomePage() {
   return (
     <div className="h-screen font-montserrat">
-      <div className="mb-12 bg-mainColor md:h-full lg:mb-20">
+      <div className="mb-12 bg-mainColor md:h-full lg:mb-0">
         <Hero />
       </div>
       <div className="mb-20 flex items-center lg:h-full">

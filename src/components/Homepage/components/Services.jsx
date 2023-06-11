@@ -15,7 +15,7 @@ function Services() {
   });
 
   return (
-    <div className="mx-auto">
+    <section className="mx-auto">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -32,10 +32,10 @@ function Services() {
         </h1>
       </motion.div>
 
-      <div className="mx-auto flex w-3/5 flex-col items-center gap-4 text-center md:gap-8 lg:flex-row lg:justify-center lg:gap-24 xl:gap-48">
+      <div className="lg:gap-18 mx-auto flex w-3/5 flex-col items-center gap-8 text-start md:gap-12 md:text-center lg:flex-row lg:justify-center xl:gap-36">
         {renderCard}
       </div>
-    </div>
+    </section>
   );
 }
 

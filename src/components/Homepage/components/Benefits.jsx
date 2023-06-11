@@ -46,7 +46,7 @@ function Benefits() {
   });
 
   return (
-    <div className="flex h-screen w-screen flex-col place-content-center items-center gap-16 px-80">
+    <div className="flex flex-col place-content-center items-center gap-16 px-80">
       <h1 className="text-7xl text-headerColor">Benefits of cooperation</h1>
       <ul className="grid grid-cols-3 grid-rows-2 gap-[0.5px] overflow-hidden rounded-md ">
         {renderImages}
