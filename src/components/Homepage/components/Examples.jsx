@@ -22,8 +22,9 @@ function Examples() {
           hidden: { opacity: 0, y: 100 },
           visible: { opacity: 1, y: 0 },
         }}
+        key={obj.id}
       >
-        <div className="flex flex-col gap-4 text-start" key={obj.id}>
+        <div className="flex flex-col gap-4 text-start">
           <h2 className="text-3xl font-medium text-headerColor">
             {obj.header1}
           </h2>
@@ -34,7 +35,7 @@ function Examples() {
         </div>
       </motion.div>
     ) : (
-      <>
+      <div key={obj.id}>
         {obj.id % 2 === 0 ? (
           <motion.div
             initial="hidden"
@@ -46,10 +47,7 @@ function Examples() {
               visible: { opacity: 1, x: 0 },
             }}
           >
-            <div
-              className="flex items-center gap-36 pb-16 lg:gap-48"
-              key={obj.id}
-            >
+            <div className="flex items-center gap-36 pb-16 lg:gap-48">
               <div className="flex basis-2/5 flex-col gap-8 text-start">
                 <h2 className="text-2xl font-medium text-headerColor lg:text-3xl">
                   {obj.header1}
@@ -80,11 +78,9 @@ function Examples() {
               hidden: { opacity: 0, x: 100 },
               visible: { opacity: 1, x: 0 },
             }}
+            key={obj.id}
           >
-            <div
-              className="flex items-center gap-36 pb-16 lg:gap-48"
-              key={obj.id}
-            >
+            <div className="flex items-center gap-36 pb-16 lg:gap-48">
               <div className="max-h-xl max-w-xl basis-3/5 overflow-hidden rounded-md shadow-lg shadow-gray-500">
                 <img
                   src={obj.img}
@@ -107,7 +103,7 @@ function Examples() {
             </div>
           </motion.div>
         )}
-      </>
+      </div>
     );
   });
 

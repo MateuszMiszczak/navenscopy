@@ -1,27 +1,29 @@
 export const testimonialsData = [
   {
-    header: "Brand's name",
-    logo: "1",
-    testimonial: "Brand's testimonial",
+    header: "Tesla",
+    paragraph: "Brand's testimonial",
     id: 1,
   },
   {
-    header: "Brand's name",
-    logo: "2",
-    testimonial: "Brand'snd'snd'snd'snd'snd'snd'snd'snd'snd's testimonial",
+    header: "SpaceX",
+    paragraph: "Brand'snd'snd'snd's nd'snd'snd'snd'sn d'snd's testimonial",
     id: 2,
   },
   {
-    header: "Brand's name",
-    logo: "3",
-    testimonial: "BrandBrandBrandBrand's testimonial",
+    header: "Microsoft",
+    paragraph: "BrandBran dBrandBrand's testi monial",
     id: 3,
   },
   {
-    header: "Brand's name",
-    logo: "4",
-    testimonial:
-      "Brand's testimonialtestimonialtestimonialtestimonialtestimonial",
+    header: "Google",
+    paragraph:
+      "Brand's testimoni altestimonialtestim onialtestimonialtestimonial",
     id: 4,
+  },
+  {
+    header: "Apple",
+    paragraph:
+      "Brand's testimoni altestimonialtestim onialtestimonialtestimonial",
+    id: 5,
   },
 ];
