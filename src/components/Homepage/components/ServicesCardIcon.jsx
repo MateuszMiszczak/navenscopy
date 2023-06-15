@@ -9,7 +9,7 @@ function ServicesCardIcon({ icon }) {
 
   switch (icon) {
     case 1:
-      currIcon = <HiOutlineChartBar />;
+      currIcon = <HiOutlineChartBar className="font-light" />;
       break;
     case 2:
       currIcon = <HiOutlineChatBubbleOvalLeftEllipsis />;

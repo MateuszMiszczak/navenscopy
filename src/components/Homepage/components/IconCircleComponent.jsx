@@ -7,7 +7,7 @@ function IconCircleComponent({ className, iconOrText }) {
   );
 
   return (
-    <div className="h-16 w-16 overflow-hidden rounded-full bg-gradient-to-r from-roundedBorderColor3 via-roundedBorderColor4 to-roundedBorderColor1 p-[3px]">
+    <div className="h-16 w-16 overflow-hidden rounded-full bg-gradient-to-tr from-roundedBorderColor1 from-20% via-roundedBorderColor2 to-roundedBorderColor3 to-80% p-[3px]">
       <div className={styles}>
         <div className="text-xl font-bold text-white">{iconOrText}</div>
       </div>

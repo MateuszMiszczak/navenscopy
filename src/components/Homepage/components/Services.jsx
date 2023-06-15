@@ -15,7 +15,7 @@ function Services() {
   });
 
   return (
-    <section className="mx-auto">
+    <section className="mx-auto text-white">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -27,7 +27,7 @@ function Services() {
         }}
         className="flex flex-col"
       >
-        <h1 className="mx-10 mb-8 place-self-center text-2xl font-bold uppercase text-headerColor md:mb-16 md:text-4xl lg:mb-40 lg:text-5xl">
+        <h1 className="mx-10 mb-8 place-self-center text-2xl font-bold uppercase md:mb-16 md:text-4xl lg:mb-40 lg:text-5xl">
           Digital services for your company
         </h1>
       </motion.div>

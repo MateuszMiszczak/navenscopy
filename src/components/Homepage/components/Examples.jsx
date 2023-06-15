@@ -52,12 +52,18 @@ function Examples() {
                 <h2 className="text-2xl font-medium text-headerColor lg:text-3xl">
                   {obj.header1}
                 </h2>
-                <p className="text-base font-medium lg:text-lg">
+                <p className="text-base font-medium text-white lg:text-lg">
                   {obj.header2}
                 </p>
-                <p className="text-base lg:text-lg">{obj.p1}</p>
-                <p className="text-base lg:text-lg">{obj.p2}</p>
-                <p className="text-base lg:text-lg">{obj.p3}</p>
+                <p className="text-base text-almostWhite lg:text-lg">
+                  {obj.p1}
+                </p>
+                <p className="text-base text-almostWhite lg:text-lg">
+                  {obj.p2}
+                </p>
+                <p className="text-base text-almostWhite lg:text-lg">
+                  {obj.p3}
+                </p>
               </div>
               <div className="max-h-xl max-w-xl basis-3/5 overflow-hidden rounded-md shadow-lg shadow-gray-500">
                 <img
@@ -93,12 +99,18 @@ function Examples() {
                 <h2 className="text-2xl font-medium text-headerColor lg:text-3xl">
                   {obj.header1}
                 </h2>
-                <p className="text-base font-medium lg:text-lg">
+                <p className="text-base font-medium text-white lg:text-lg">
                   {obj.header2}
                 </p>
-                <p className="text-base lg:text-lg">{obj.p1}</p>
-                <p className="text-base lg:text-lg">{obj.p2}</p>
-                <p className="text-base lg:text-lg">{obj.p3}</p>
+                <p className="text-base text-almostWhite lg:text-lg">
+                  {obj.p1}
+                </p>
+                <p className="text-base text-almostWhite lg:text-lg">
+                  {obj.p2}
+                </p>
+                <p className="text-base text-almostWhite lg:text-lg">
+                  {obj.p3}
+                </p>
               </div>
             </div>
           </motion.div>
@@ -108,7 +120,7 @@ function Examples() {
   });
 
   return (
-    <section className="mx-auto flex h-full w-3/5 flex-col gap-10 py-5 md:h-full md:gap-20 md:py-10">
+    <section className="mx-auto flex h-full w-3/5 flex-col gap-10 py-6 md:h-full md:gap-20 md:py-20">
       {renderElement}
     </section>
   );

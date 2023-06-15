@@ -28,7 +28,7 @@ function Benefits() {
   });
 
   return (
-    <section className="mx-auto flex h-full w-3/5 flex-col gap-10 py-5 md:h-full md:gap-16 lg:gap-32">
+    <section className="mx-auto flex h-full w-3/5 flex-col gap-10 py-12 md:h-full md:gap-16 md:py-20 lg:gap-32 lg:py-24">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -53,7 +53,7 @@ function Benefits() {
           hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
         }}
-        className="flex flex-col gap-1 place-self-center overflow-hidden rounded-lg bg-benefitsLightest shadow-bottom shadow-gray-500 lg:flex-row"
+        className="flex flex-col gap-1 place-self-center overflow-hidden rounded-lg bg-benefitsLightest shadow-bottom shadow-gray-600 lg:flex-row"
       >
         {renderData}
       </motion.div>
