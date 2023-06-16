@@ -34,6 +34,8 @@ export default {
         borderGray: "#9a9c9c",
         borderLighterMainText: "#258B76",
         borderLightestMain: "#00ffab",
+        borderLightestMainBluish: "#00667a",
+        borderLightestMainBluish2: "#4d94a2",
       },
       gradientColorStops: {
         ligterGrayGradient: "#9a9c9c",
@@ -46,6 +48,9 @@ export default {
         roundedBorderColor4: "#366d81",
         cardServiceBg1: "#084b3f",
         cardServiceBg2: "#27a58c",
+        benefitsMediumGr: "#02394f",
+        benefitsLighterGr: "#044862",
+        benefitsLightestGr: "#2f7182",
       },
       boxShadow: {
         bottom: "0 8px 40px -2px",

@@ -24,7 +24,7 @@ function Examples() {
         }}
         key={obj.id}
       >
-        <div className="flex flex-col gap-4 text-start">
+        <div className="flex flex-col gap-4 text-start text-white">
           <h2 className="text-3xl font-medium text-headerColor">
             {obj.header1}
           </h2>

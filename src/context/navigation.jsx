@@ -19,8 +19,18 @@ function NavigationProvider({ children }) {
     setCurrentPath(to);
   };
 
+  const scrollToTopOfPage = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const scrollToTopOfPageNotSmooth = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  };
+
   return (
-    <NavigationContext.Provider value={{ currentPath, navigate }}>
+    <NavigationContext.Provider
+      value={{ currentPath, navigate, scrollToTopOfPage, scrollToTopOfPageNotSmooth }}
+    >
       {children}
     </NavigationContext.Provider>
   );

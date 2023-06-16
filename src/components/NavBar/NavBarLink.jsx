@@ -2,7 +2,7 @@ import classNames from "classnames";
 import useNavigation from "../../hooks/use-navigation";
 
 function NavBarLink({ to, children, className, activeClassName }) {
-  const { navigate, currentPath } = useNavigation();
+  const { navigate, currentPath, scrollToTopOfPageNotSmooth } = useNavigation();
 
   const classes = classNames(
     `relative inline-block
@@ -38,6 +38,8 @@ function NavBarLink({ to, children, className, activeClassName }) {
     event.preventDefault();
 
     navigate(to);
+
+    currentPath !== to && scrollToTopOfPageNotSmooth();
   };
 
   return (
