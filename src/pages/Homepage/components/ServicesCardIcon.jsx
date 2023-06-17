@@ -1,8 +1,8 @@
 import {
   HiOutlineChartBar,
-  HiOutlineChatBubbleOvalLeftEllipsis,
-  HiOutlineComputerDesktop,
-} from "react-icons/hi2";
+  HiChat,
+  HiOutlineDesktopComputer,
+} from "react-icons/hi";
 
 function ServicesCardIcon({ icon }) {
   let currIcon;
@@ -12,10 +12,10 @@ function ServicesCardIcon({ icon }) {
       currIcon = <HiOutlineChartBar className="font-light" />;
       break;
     case 2:
-      currIcon = <HiOutlineChatBubbleOvalLeftEllipsis />;
+      currIcon = <HiChat />;
       break;
     case 3:
-      currIcon = <HiOutlineComputerDesktop />;
+      currIcon = <HiOutlineDesktopComputer />;
       break;
     default:
       currIcon = <div>Icon</div>;

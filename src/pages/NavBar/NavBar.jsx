@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HiBars3, HiOutlineXMark } from "react-icons/hi2";
+import { HiMenu, HiX } from "react-icons/hi";
 
 import useNavigation from "../../hooks/use-navigation";
 import useMediaQuery from "../../hooks/useMediaQuery";
@@ -20,7 +20,7 @@ function NavBar({ isTopOfPage }) {
     ? "bg-mainColor"
     : "bg-gradient-to-b from-black via-gray-900 via-gray-800 via-gray-700 via-85%";
 
-  const renderIcon = isMenuToggled ? <HiOutlineXMark /> : <HiBars3 />;
+  const renderIcon = isMenuToggled ? <HiX /> : <HiMenu />;
 
   const renderedLinks = links.map((link) => {
     return (

@@ -1,10 +1,9 @@
 import Hero from "./components/Hero";
-
 import Services from "./components/Services";
-// import What from "./components/What";
 import Examples from "./components/Examples";
 import Benefits from "./components/Benefits";
 import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
 
 function HomePage() {
   return (
@@ -24,7 +23,9 @@ function HomePage() {
       <div className="mx-auto border-b border-borderLighterMainText bg-mainColor lg:h-full">
         <Testimonials />
       </div>
-      <div className="bg-secondMainColor">Footer</div>
+      <div className="bg-secondMainColor">
+        <Footer />
+      </div>
     </div>
   );
 }

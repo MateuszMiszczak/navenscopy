@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { RxDotFilled } from "react-icons/rx";
+import { BsDot } from "react-icons/bs";
 import { testimonialsData } from "../../../data/testimonialsData";
 
 import { motion } from "framer-motion";
@@ -50,7 +50,7 @@ function TestimonialsCarousel() {
                 currentIndex === slideIndex ? "text-mainColor" : "text-gray-400"
               }`}
             >
-              <RxDotFilled className="" />
+              <BsDot />
             </div>
           ))}
         </div>

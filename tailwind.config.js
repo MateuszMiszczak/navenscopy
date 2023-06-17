@@ -26,6 +26,7 @@ export default {
         lightGray: "#4e595d",
         headerColor: "#00ab88",
         almostWhite: "#f9f9f9",
+        textLightestMain: "#00ffab",
       },
       borderWidth: {
         borderSmallest: "0.5px",

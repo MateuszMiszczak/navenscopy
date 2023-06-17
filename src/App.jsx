@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
-import NavBar from "./components/NavBar/NavBar";
-import Route from "./components/NavBar/Route";
-import HomePage from "./components/Homepage/HomePage";
+import NavBar from "./pages/NavBar/NavBar";
+import Route from "./pages/NavBar/Route";
+import HomePage from "./pages/Homepage/HomePage";
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
