@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import SocialMediaIcons from "../../components/SocialMediaIcons";
 
 const ContactMe = () => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -21,10 +22,10 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className="flex h-screen flex-col border-b border-borderLighterMainText bg-mainColor pt-32 text-white"
+      className="scroll-none flex h-screen w-screen flex-col gap-10 border-b border-borderLighterMainText bg-mainColor pt-32 text-white md:gap-12 lg:gap-16"
     >
       <motion.div
-        className="mx-10 mb-8 place-self-center text-3xl font-medium uppercase tracking-wide sm:text-4xl md:mb-16 md:text-5xl lg:mb-40 lg:text-6xl"
+        className="mx-10 mb-8 place-self-center text-3xl font-medium uppercase tracking-wide sm:text-4xl md:mb-16 md:text-5xl lg:text-6xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -38,7 +39,7 @@ const ContactMe = () => {
       </motion.div>
 
       <motion.div
-        className="mt-10 w-3/4 place-self-center text-black md:mt-0"
+        className="mb-2 w-3/4 place-self-center text-black md:mb-6 lg:mb-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -97,7 +98,7 @@ const ContactMe = () => {
 
             {isAboveMediumScreens ? (
               <button
-                className={`text-md rounded-lg border border-borderLightestMain bg-lighterMain p-4 font-bold uppercase text-gray-900 shadow-lg shadow-gray-700 transition delay-[10ms] hover:scale-[0.95] hover:bg-opacity-40 hover:text-white md:text-xl lg:text-2xl`}
+                className={`text-md hover:text-lighterMain rounded-lg border border-borderLightestMain p-4 font-bold uppercase text-textLightestMain shadow-lg shadow-gray-700 transition delay-[10ms] hover:scale-[0.95] hover:bg-lighterMain3  hover:text-white md:text-xl lg:text-2xl`}
                 type="submit"
               >
                 SEND ME A MESSAGE
@@ -151,13 +152,27 @@ const ContactMe = () => {
             </div>
           ) : (
             <button
-              className={`text-md rounded-lg border border-borderLightestMain bg-lighterMain p-4 font-bold uppercase text-gray-900 shadow-lg shadow-gray-700 transition delay-[10ms] hover:scale-[0.95] hover:bg-opacity-40 hover:text-white md:text-xl lg:text-2xl`}
+              className={`text-md bg-textLightestMain2 hover:text-lighterMain rounded-lg border border-borderLightestMain p-4 font-bold uppercase text-white shadow-lg shadow-gray-700 transition delay-[10ms] hover:scale-[0.95] hover:bg-opacity-40 md:text-xl lg:text-2xl`}
               type="submit"
             >
               SEND ME A MESSAGE
             </button>
           )}
         </form>
+      </motion.div>
+
+      <motion.div
+        className="mx-10 mb-8 place-self-center text-3xl font-medium uppercase tracking-wide sm:text-4xl md:mb-16 md:text-5xl lg:mb-40 lg:text-6xl"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ delay: 0.2, duration: 0.2 }}
+        variants={{
+          hidden: { opacity: 0, y: 50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      >
+        <SocialMediaIcons />
       </motion.div>
     </section>
   );

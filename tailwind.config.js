@@ -13,6 +13,8 @@ export default {
         mainColor: "#01161e",
         backgroundSections: "#e6e8e9",
         lighterMain: "#258B76",
+        lighterMain2: "#00ab88",
+        lighterMain3: "#00b378",
         mainColorGradientTint1Background: "#1a2d35",
         benefitsDark: "#022b3b",
         benefitsDarkRgba: "rgba(2, 43, 59, 0.35)",
@@ -27,6 +29,7 @@ export default {
         headerColor: "#00ab88",
         almostWhite: "#f9f9f9",
         textLightestMain: "#00ffab",
+        textLightestMain2: "#00e69a",
       },
       borderWidth: {
         borderSmallest: "0.5px",
