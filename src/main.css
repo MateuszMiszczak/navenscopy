@@ -12,3 +12,13 @@ body,
 .app {
   height: 100%;
 }
+
+input::placeholder,
+textarea::placeholder {
+  @apply font-cinzel transition duration-200;
+}
+
+input::placeholder:focus,
+textarea::placeholder:focus {
+  @apply -translate-x-2 -translate-y-4 scale-[0.8] transform text-gray-600 opacity-100;
+}

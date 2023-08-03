@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import NavBar from "./pages/NavBar/NavBar";
 import Route from "./pages/NavBar/Route";
 import HomePage from "./pages/Homepage/HomePage";
+import ContactMe from "./pages/ContactMe/ContactMe";
 
 function App() {
   const [isTopOfPage, setIsTopOfPage] = useState(true);
@@ -25,32 +26,6 @@ function App() {
       </Route>
       <Route path="/offer">
         <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
       </Route>
       <Route path="/portfolio">
         <div className="pt-32">Portfolio abadnbaednahbe</div>
@@ -59,7 +34,7 @@ function App() {
         <div className="pt-32">Faq abadnbaednahbe</div>
       </Route>
       <Route path="/contact">
-        <div className="pt-32">Contact abadnbaednahbe</div>
+        <ContactMe />
       </Route>
     </div>
   );
