@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import NavBar from "./pages/NavBar/NavBar";
 import Route from "./pages/NavBar/Route";
 import HomePage from "./pages/Homepage/HomePage";
+import Offer from "./pages/Offer/Offer";
 import ContactMe from "./pages/ContactMe/ContactMe";
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
         <HomePage />
       </Route>
       <Route path="/offer">
-        <div className="pt-32">Offer abadnbaednahbe TEST TEST</div>
+        <Offer />
       </Route>
       <Route path="/portfolio">
         <div className="pt-32">Portfolio abadnbaednahbe</div>

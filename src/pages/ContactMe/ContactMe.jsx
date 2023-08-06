@@ -52,7 +52,7 @@ const ContactMe = () => {
         <form
           target="_blank"
           onSubmit={onSubmit}
-          action="https://formsubmit.co/4ab93d72cf88db583bb32ee368ce8fb4"
+          action="https://formsubmit.co/a4668f5316b726a5f20ab4af24f532d0"
           method="POST"
           className="grid grid-cols-1 gap-9 md:grid-cols-2"
         >

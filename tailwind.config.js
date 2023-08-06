@@ -40,6 +40,7 @@ export default {
         borderLightestMain: "#00ffab",
         borderLightestMainBluish: "#00667a",
         borderLightestMainBluish2: "#4d94a2",
+        borderLighterMain1: "#00ab88",
       },
       gradientColorStops: {
         ligterGrayGradient: "#9a9c9c",
