@@ -56,6 +56,11 @@ export default {
         benefitsMediumGr: "#02394f",
         benefitsLighterGr: "#044862",
         benefitsLightestGr: "#2f7182",
+        faq1: "#074737",
+        faq2: "#0C6051",
+        faq3: "#157460",
+        faq4: "#30947F",
+        faq5: "#24A88E",
       },
       boxShadow: {
         bottom: "0 8px 40px -2px",

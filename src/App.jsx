@@ -4,6 +4,7 @@ import NavBar from "./pages/NavBar/NavBar";
 import Route from "./pages/NavBar/Route";
 import HomePage from "./pages/Homepage/HomePage";
 import Offer from "./pages/Offer/Offer";
+import Faq from "./pages/FAQ/Faq";
 import ContactMe from "./pages/ContactMe/ContactMe";
 
 function App() {
@@ -28,11 +29,8 @@ function App() {
       <Route path="/offer">
         <Offer />
       </Route>
-      <Route path="/portfolio">
-        <div className="pt-32">Portfolio abadnbaednahbe</div>
-      </Route>
-      <Route path="/blog">
-        <div className="pt-32">Faq abadnbaednahbe</div>
+      <Route path="/faq">
+        <Faq />
       </Route>
       <Route path="/contact">
         <ContactMe />

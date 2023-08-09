@@ -1,9 +1,8 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { whyData } from "../../../data/offer/why-data";
+import { whyData } from "../../../data/offer/whyData";
 import useMediaQuery from "../../../hooks/useMediaQuery";
 const Why = () => {
-  const [data, setData] = useState(whyData);
+  const data = whyData;
   const isAboveLargeScreens = useMediaQuery("(min-width: 1200px)");
 
   const renderedElements = data.gridElements.map((obj) => {

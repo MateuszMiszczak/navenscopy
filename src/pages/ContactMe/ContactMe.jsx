@@ -22,7 +22,7 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className="scroll-none flex h-screen w-screen flex-col gap-10 border-b border-borderLighterMainText bg-mainColor pt-32 text-white md:gap-12 lg:gap-16"
+      className="scroll-none flex h-screen w-screen flex-col gap-10 border-b border-borderLighterMainText bg-mainColor pt-32 font-montserrat text-white md:gap-12 lg:gap-16"
     >
       <motion.div
         className="mx-10 mb-8 place-self-center text-3xl font-medium uppercase tracking-wide sm:text-4xl md:mb-16 md:text-5xl lg:text-6xl"

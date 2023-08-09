@@ -1,10 +1,9 @@
-import { useState } from "react";
-import { offerWhat } from "../../../data/offer/what-data";
+import { offerWhat } from "../../../data/offer/whatData";
 import { motion } from "framer-motion";
 import Button from "../../../components/Button";
 
 const What = () => {
-  const [data, setData] = useState(offerWhat);
+  const data = offerWhat;
 
   const renderedCards = data.buttons.map((card) => {
     return (
@@ -16,7 +15,7 @@ const What = () => {
         viewport={{ once: true, amount: 0.5 }}
         transition={{ delay: 0.4, duration: 0.3 }}
         variants={{
-          hidden: { opacity: 0, x: -50 },
+          hidden: { opacity: 0, x: 50 },
           visible: { opacity: 1, x: 0 },
         }}
       >
